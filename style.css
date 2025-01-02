@@ -1,0 +1,406 @@
+@import url(https://fonts.gstatic.com/s/karla/v31/qkB_XvYC6trAT7RQNNK2EG7SIwPWMNlCVytER0IPh7KX59Z0CnSKYmkvnHE.woff2);
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Karla';
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+/* HEADER */
+header {
+    background-color: #383636;
+    padding: 5px 15px 5px 15px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+/* nav con un ancho de 100% para que el nav-words no esté centrado */
+nav {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+#nav-words > li > a {
+    text-decoration: none;
+    color: grey;
+}
+
+#nav-words > li > a:hover {
+    color: white;
+}
+
+#nav-img {
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+}
+
+#bandera {
+    border-radius: 10px;
+}
+
+.img-nav{
+    width: 20px;
+}
+
+.nav-responsive{
+    display: none;
+}
+
+/* MAIN */
+h2 {
+    /* font-size: 15px; */
+    margin-left: 20px;
+}
+h2 > a {
+    text-decoration: none;
+}
+
+.container{
+    max-width: 2000px;
+    margin: auto;
+    margin-bottom: 200px;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.gallery {
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 2fr 1.5fr 1.5fr 2fr;
+}
+
+.gallery > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .gallery > a {
+    padding: 0;
+    margin: 0;
+    border: 2px solid purple;
+} */
+
+#oscurecer-img:hover{
+    filter: brightness(40%);
+    /* transition-duration: 0.5s; */
+}
+
+.brillo-img:hover{
+    opacity: 0.5;
+}
+
+/* posiciones para que el botón aparezca por encima de la imágen */
+.brillo-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* CARACTERISTICAS DE LOS BOTONES PARA QUE ESTÉN CENTRADOS Y SE AJUSTEN A LA MEDIDA DE LA PANTALLA */
+.button-container{
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    max-width: 90%;
+    min-width: 80px;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.button-container > button{
+    background-color: #3e53bb;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 60px 15px 60px;
+    cursor: pointer;
+}
+
+.brillo-img > img{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+}
+
+/* Colocación de las imágenes dentro del grid */
+.gallery > a:nth-child(1) {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+.gallery > a:nth-child(2) {
+    grid-row: 1 / 3;
+    grid-column: 3 / 5;
+}
+.gallery > a:nth-child(3) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.gallery > a:nth-child(4) {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+}
+.gallery > a:nth-child(5) {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+.gallery > a:nth-child(6) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+.gallery > a:nth-child(7) {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+}
+.gallery > a:nth-child(8) {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+}
+.gallery > a:nth-child(9) {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+}
+.gallery > a:nth-child(10) {
+    grid-row: 4 / 5;
+    grid-column: 3 / 5;
+}
+
+/* contenedor donde aparecen las imagenes usando un scroll */
+#container-scroll{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 200px;
+    /* para que el container-scroll esté centrado --- margin auto */
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+}
+
+#container-scroll > ul {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+/* #container-scroll > ul > li {
+    display: flex;
+} */
+.box > a {
+    color: black;
+    text-decoration: none;
+}
+
+.box > a > img {
+    width: 300px;
+    height: 400px;
+    padding: 0;
+}
+/* cambiar de imagen cuando pasas el ratón por encima */
+.flip-container > img:last-child{
+    display: none;
+}
+
+.flip-container:hover img:last-child{
+    display: block;
+}
+
+.flip-container:hover >img:first-child{
+    display: none;
+}
+
+h3, figcaption{
+    position: static;
+}
+
+figure{
+    margin: 2px;
+}
+
+/* FOOTER */
+footer {
+    height: 100%;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer>nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+#nav-footer-words{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-footer > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-footer > li > a:hover {
+    color: grey;
+}
+
+p {
+    text-align: center;
+}
+
+
+
+/* MEDIAS QUERIES */
+/* HEADER */
+@media (max-width: 1230px) {
+    /* MAIN */
+    /* FOOTER */
+    body, footer{
+        font-size: 12px;
+    }
+    .img-nav{
+        width: 15px;
+    }
+    #container-scroll{
+        max-width: 900px;
+    }
+    }
+    
+@media (max-width: 1046px){
+    /* HEADER */
+    #nav-words, #nav-img, header>img{
+        display: none;
+        width: 0%;
+    }
+    nav{
+        height: 100%;
+        width: 0%;
+    }
+    .nav-responsive{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-responsive>ul{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+    }
+    #nav-img-responsive{
+        display: flex;
+        gap: 1rem;
+    }
+
+    /* MAIN */
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 1fr);
+    }
+
+    /* Colocación de las imágenes dentro del grid */
+    .gallery > a:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(2) {
+        grid-row: 2 / 3;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(3) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(4) {
+        grid-row: 4 / 5;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(5) {
+        grid-row: 5 / 6;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(6) {
+        grid-row: 6 / 7;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(7) {
+        grid-row: 7 / 8;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(8) {
+        grid-row: 8 / 9;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(9) {
+        grid-row: 9 / 10;
+        grid-column: 1 / 5;
+    }
+    .gallery > a:nth-child(10) {
+        grid-row: 10 / 11;
+        grid-column: 1 / 5;
+    }
+
+    #container-scroll{
+        max-width: 600px;
+    }
+ 
+    }
+    
+@media (max-width: 600px){
+    #container-scroll{
+        display: none;
+    }
+        /* importante para que las imágenes se adapten a dispositivos pequeños */
+        /* img {
+            max-width: 100%;
+            height: auto;
+        } */
+    } 
+    
+    @media (max-width: 400px) {
+        .button-container > button{
+            padding: 10px 40px 10px 40px;
+        }
+        body, footer{
+            font-size: 10px;
+        }
+    }
+    
