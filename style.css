@@ -63,9 +63,9 @@ nav {
 
 /* MAIN */
 h2 {
-    /* font-size: 15px; */
     margin-left: 20px;
 }
+
 h2 > a {
     text-decoration: none;
 }
@@ -91,15 +91,8 @@ h2 > a {
     height: 100%;
 }
 
-/* .gallery > a {
-    padding: 0;
-    margin: 0;
-    border: 2px solid purple;
-} */
-
 #oscurecer-img:hover{
     filter: brightness(40%);
-    /* transition-duration: 0.5s; */
 }
 
 .brillo-img:hover{
@@ -202,9 +195,6 @@ h2 > a {
     list-style: none;
 }
 
-/* #container-scroll > ul > li {
-    display: flex;
-} */
 .box > a {
     color: black;
     text-decoration: none;
@@ -215,6 +205,7 @@ h2 > a {
     height: 400px;
     padding: 0;
 }
+
 /* cambiar de imagen cuando pasas el ratón por encima */
 .flip-container > img:last-child{
     display: none;
@@ -283,31 +274,30 @@ p {
 }
 
 
-
 /* MEDIAS QUERIES */
 /* HEADER */
 @media (max-width: 1230px) {
-    /* MAIN */
-    /* FOOTER */
     body, footer{
         font-size: 12px;
     }
+    /* HEADER */
     .img-nav{
         width: 15px;
     }
+    /* MAIN */
     #container-scroll{
         max-width: 900px;
     }
     }
-    
+
 @media (max-width: 1046px){
     /* HEADER */
     #nav-words, #nav-img, header>img{
         display: none;
-        width: 0%;
     }
     nav{
         height: 100%;
+        /* para que los elementos del nav-responsive tengan espacio para ponerse por todo el header */
         width: 0%;
     }
     .nav-responsive{
@@ -381,18 +371,12 @@ p {
     #container-scroll{
         max-width: 600px;
     }
- 
     }
     
 @media (max-width: 600px){
     #container-scroll{
         display: none;
     }
-        /* importante para que las imágenes se adapten a dispositivos pequeños */
-        /* img {
-            max-width: 100%;
-            height: auto;
-        } */
     } 
     
     @media (max-width: 400px) {
